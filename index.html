@@ -2,24 +2,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GeoPoint</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #eef5ff;
-      padding: 40px 15px;
-    }
-    h1 {
-      color: #1455a0;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GeoPoint | Geography & GIS</title>
+<meta name="description" content="GeoPoint provides Geography notes, revision resources and interactive GIS mapping.">
+<style>
+:root{--navy:#102a43;--green:#20a477;--light:#f3f7f6;--text:#243b53}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--light);color:var(--text);line-height:1.6}
+header{background:var(--navy);color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:25px;font-weight:bold;color:#65e0b4}
+nav a{color:white;text-decoration:none;margin:0 7px;font-size:14px}
+.hero{padding:65px 7%;background:linear-gradient(135deg,#102a43,#176b65);color:white}
+.hero h1{font-size:clamp(34px,7vw,56px);line-height:1.15;margin:10px 0}
+.hero p{max-width:600px}
+.btn{display:inline-block;background:var(--green);color:white;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:bold;margin:8px 5px 0 0}
+section{padding:38px 6%;scroll-margin-top:15px}
+h2{color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
+.card{background:white;border-radius:12px;padding:20px;box-shadow:0 3px 15px #102a4310}
+.card h3{margin-top:0;color:#176b65}
+input,select{padding:12px;width:100%;border:1px solid #ccd6dd;border-radius:7px;margin:6px 0 14px;font-size:16px}
+details{background:#f3f7f6;padding:12px;margin-top:12px;border-radius:8px}
+summary{cursor:pointer;font-weight:bold}
+iframe{width:100%;height:350px;border:0;border-radius:12px}
+footer{background:var(--navy);color:white;text-align:center;padding:25px}
+.small{font-size:14px;color:#627d98}
+</style>
 </head>
 <body>
-  <h1>Welcome to GeoPoint!</h1>
-  <p>Explore geography, maps, people and our environment.</p>
-  <p>My first website is taking shape!</p>
+<header>
+  <div class="logo">🌍 GeoPoint</div>
+  <nav>
+    <a href="#notes">Notes</a>
+    <a href="#revision">Revision</a>
+    <a href="#gis">GIS Map</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <p>EXPLORE • LEARN • MAP</p>
+  <h1>Understand the world through Geography.</h1>
+  <p>Your learning hub for Geography notes, university revision and Geographic Information Systems (GIS).</p>
+  <a class="btn" href="#notes">Explore Notes</a>
+  <a class="btn" href="#gis">Open GIS Map</a>
+</div>
+
+<section id="notes">
+<h2>📚 Geography Notes</h2>
+<p>Explore introductory notes. These are learning summaries, not complete lecture notes.</p>
+<input id="search" placeholder="Search topics..." oninput="filterNotes()">
+<div class="grid" id="noteGrid">
+<div class="card note"><h3>Physical Geography</h3><p>Study landforms, weather, climate, soils and natural processes.</p><details><summary>Read summary</summary><p>Physical geography examines Earth's natural systems. Major topics include geomorphology, climatology, hydrology, biogeography and soil geography.</p></details></div>
+<div class="card note"><h3>Human Geography</h3><p>People, settlements, population and human activities.</p><details><summary>Read summary</summary><p>Human geography explores population distribution, migration, urbanisation, culture and how people interact with their environments.</p></details></div>
+<div class="card note"><h3>Cartography</h3><p>The science and art of making maps.</p><details><summary>Read summary</summary><p>Important map elements include title, scale, legend, north arrow, symbols and source. Map projections represent Earth's curved surface on a flat map.</p></details></div>
+<div class="card note"><h3>Hydrology</h3><p>Water movement and distribution on Earth.</p><details><summary>Read summary</summary><p>The hydrological cycle includes evaporation, condensation, precipitation, infiltration, surface runoff and groundwater flow.</p></details></div>
+<div class="card note"><h3>Remote Sensing & GIS</h3><p>Collecting and analysing geographical data.</p><details><summary>Read summary</summary><p>Remote sensing collects information from a distance, often using satellites. GIS stores, manages, analyses and displays geographically referenced data.</p></details></div>
+<div class="card note"><h3>Population Geography</h3><p>Population size, distribution and change.</p><details><summary>Read summary</summary><p>Population change is influenced by fertility, mortality and migration. Population density is population divided by land area.</p></details></div>
+<div class="card note"><h3>Economic Geography</h3><p>Location of industries and economic activities.</p><details><summary>Read summary</summary><p>Economic geography examines the location of agriculture, industries, transport, trade and services, including factors influencing their distribution.</p></details></div>
+<div class="card note"><h3>Environmental Geography</h3><p>Relationships between people and the environment.</p><details><summary>Read summary</summary><p>Key themes include conservation, pollution, biodiversity, climate change, natural resources and sustainable development.</p></details></div>
+</div>
+<p id="noResults" hidden>No matching topics. Try another search.</p>
+</section>
+
+<section id="revision">
+<h2>📝 Revision Corner</h2>
+<p>Test your understanding with these introductory questions.</p>
+<div class="grid">
+<div class="card"><h3>Question 1</h3><p>What is Geography?</p><details><summary>Show answer</summary><p>Geography is the study of Earth's places, environments, spatial patterns and relationships between people and their surroundings.</p></details></div>
+<div class="card"><h3>Question 2</h3><p>Name four essential elements of a map.</p><details><summary>Show answer</summary><p>Examples include a title, scale, legend and north arrow.</p></details></div>
+<div class="card"><h3>Question 3</h3><p>What is GIS?</p><details><summary>Show answer</summary><p>GIS stands for Geographic Information System. It is used to collect, manage, analyse and display spatial data.</p></details></div>
+<div class="card"><h3>Question 4</h3><p>Calculate population density for 20,000 people living in 100 km².</p><details><summary>Show answer</summary><p>Population density = population ÷ area = 20,000 ÷ 100 = 200 people per km².</p></details></div>
+</div>
+</section>
+
+<section id="gis">
+<h2>🗺️ Interactive GIS Map</h2>
+<p>Explore locations, zoom and pan around the world using this online map.</p>
+<iframe title="Interactive world map" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=33.5%2C-5.5%2C42.5%2C5.5&layer=mapnik"></iframe>
+<p class="small">Map provided by OpenStreetMap. Internet access is required. This starter map displays a region around Kenya; it does not yet provide custom GIS analysis or user-uploaded map layers.</p>
+<a class="btn" href="https://www.openstreetmap.org/" target="_blank" rel="noopener">Explore OpenStreetMap</a>
+<a class="btn" href="https://qgis.org/" target="_blank" rel="noopener">Discover QGIS</a>
+</section>
+
+<section id="about">
+<h2>About GeoPoint</h2>
+<div class="card">
+<p>GeoPoint is a Geography learning and GIS resource website created to make geographical knowledge, map exploration and revision more accessible.</p>
+<p><strong>Our focus:</strong> Geography education, cartography, spatial analysis and environmental understanding.</p>
+</div>
+</section>
+
+<footer>
+<strong>GeoPoint</strong>
+<p>Explore the Earth. Understand places. Discover patterns.</p>
+<p class="small">Educational resource • © <span id="year"></span> GeoPoint</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+function filterNotes(){
+ const q=document.getElementById("search").value.toLowerCase();
+ let count=0;
+ document.querySelectorAll(".note").forEach(card=>{
+  const match=card.textContent.toLowerCase().includes(q);
+  card.hidden=!match;
+  if(match) count++;
+ });
+ document.getElementById("noResults").hidden=count!==0;
+}
+</script>
 </body>
 </html>
