@@ -66,6 +66,1052 @@ footer{background:var(--navy);color:white;text-align:center;padding:25px}
 <p id="noResults" hidden>No matching topics. Try another search.</p>
 </section>
 
+<!-- GEO 112: REMOTE SENSING AND GIS -->
+<style>
+#geo112 {
+  padding: 35px 18px;
+  margin: 25px auto;
+  max-width: 1100px;
+  line-height: 1.75;
+}
+#geo112 h2, #geo112 h3, #geo112 h4 {
+  line-height: 1.4;
+}
+#geo112 .geo-intro {
+  padding: 20px;
+  border-radius: 12px;
+  background: #eaf4f2;
+  color: #173d35;
+  margin-bottom: 22px;
+}
+#geo112 details {
+  border: 1px solid #d9e2df;
+  border-radius: 10px;
+  margin: 13px 0;
+  padding: 15px;
+  background: #fff;
+}
+#geo112 summary {
+  font-weight: 700;
+  cursor: pointer;
+  color: #176b55;
+  font-size: 1.05rem;
+}
+#geo112 details p, #geo112 details li {
+  line-height: 1.8;
+}
+#geo112 .geo-diagram {
+  background: #f1f6f8;
+  border-left: 4px solid #23866b;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 15px 0;
+  overflow-wrap: anywhere;
+  text-align: center;
+  font-weight: 600;
+}
+#geo112 .geo-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+#geo112 .geo-table th,
+#geo112 .geo-table td {
+  border: 1px solid #ccd8d5;
+  padding: 10px;
+  text-align: left;
+}
+#geo112 .geo-table th {
+  background: #eaf4f2;
+}
+#geo112 .geo-note {
+  background: #fff7e6;
+  border-left: 4px solid #d49b30;
+  padding: 13px;
+  margin: 14px 0;
+  border-radius: 6px;
+}
+#geo112 .geo-questions {
+  background: #f1f6f8;
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+#geo112 a {
+  color: #14775c;
+}
+</style>
+
+<section id="geo112">
+
+<h2>GEO 112: REMOTE SENSING AND GEOGRAPHIC INFORMATION SYSTEMS (GIS)</h2>
+
+<div class="geo-intro">
+<strong>Course description</strong>
+<p>This unit introduces the scientific principles, technologies, methods and applications of Remote Sensing and Geographic Information Systems. It examines how geographical information is collected, processed, stored, analysed and presented to understand spatial patterns and processes on the Earth's surface.</p>
+
+<strong>Learning objectives</strong>
+<p>By the end of this unit, a student should be able to:</p>
+<ul>
+<li>Define Remote Sensing and GIS.</li>
+<li>Explain the principles of electromagnetic radiation.</li>
+<li>Describe the components and operation of remote sensing systems.</li>
+<li>Differentiate between active and passive remote sensing.</li>
+<li>Explain satellite imagery and image interpretation.</li>
+<li>Understand spatial, spectral, temporal and radiometric resolution.</li>
+<li>Identify GIS data types, components and applications.</li>
+<li>Perform basic spatial analysis and interpret GIS outputs.</li>
+<li>Apply Remote Sensing and GIS to environmental and development problems.</li>
+</ul>
+</div>
+
+<!-- TOPIC 1 -->
+
+<details open>
+<summary>TOPIC 1: INTRODUCTION TO REMOTE SENSING</summary>
+
+<h3>1.1 Meaning of Remote Sensing</h3>
+
+<p>Remote sensing is the scientific process of collecting information about objects, phenomena or areas on the Earth's surface without making direct physical contact with them. It involves detecting and measuring energy reflected or emitted by objects using sensors mounted on satellites, aircraft, drones or other platforms.</p>
+
+<p>For example, a satellite orbiting the Earth can collect information about forests, rivers, agricultural fields, settlements and oceans without a researcher physically visiting those locations.</p>
+
+<p>Remote sensing enables geographers to observe large geographical areas, monitor environmental changes and study places that may be difficult or dangerous to access.</p>
+
+<h3>1.2 Historical development of Remote Sensing</h3>
+
+<p>Remote sensing developed through several technological stages:</p>
+
+<ol>
+<li><strong>Early aerial photography:</strong> Cameras mounted on balloons and aircraft were used to capture images of the Earth's surface.</li>
+<li><strong>Military applications:</strong> Aerial photographs became important for reconnaissance, surveillance and military mapping.</li>
+<li><strong>Satellite technology:</strong> The development of artificial satellites made it possible to observe large areas of the Earth repeatedly.</li>
+<li><strong>Digital remote sensing:</strong> Electronic sensors began recording numerical information that could be processed using computers.</li>
+<li><strong>Modern remote sensing:</strong> Satellites, drones, radar, LiDAR, artificial intelligence and cloud computing have improved the collection and analysis of geographical information.</li>
+</ol>
+
+<h3>1.3 Main components of a remote sensing system</h3>
+
+<ol>
+<li><strong>Energy source:</strong> Provides electromagnetic energy. The Sun is the main source for many passive remote sensing systems.</li>
+<li><strong>Atmosphere:</strong> The medium through which radiation travels. It can absorb and scatter electromagnetic energy.</li>
+<li><strong>Target:</strong> The geographical object being studied, such as vegetation, water, soil or buildings.</li>
+<li><strong>Sensor:</strong> An instrument that detects and records energy from the target.</li>
+<li><strong>Platform:</strong> The vehicle carrying the sensor, such as a satellite, aircraft or drone.</li>
+<li><strong>Data transmission:</strong> Recorded information is transmitted to receiving stations.</li>
+<li><strong>Data processing:</strong> Raw data are corrected, enhanced and converted into useful images or information.</li>
+<li><strong>Interpretation and application:</strong> Information is analysed and used to solve geographical problems.</li>
+</ol>
+
+<div class="geo-diagram">
+ENERGY SOURCE (SUN OR SENSOR)<br>
+↓<br>
+ATMOSPHERE<br>
+↓<br>
+EARTH'S SURFACE / TARGET<br>
+↓<br>
+REFLECTED OR EMITTED ENERGY<br>
+↓<br>
+SENSOR ON SATELLITE / AIRCRAFT<br>
+↓<br>
+DATA TRANSMISSION AND PROCESSING<br>
+↓<br>
+IMAGE INTERPRETATION AND APPLICATION
+</div>
+
+<h3>1.4 Types of Remote Sensing</h3>
+
+<h4>A. Passive Remote Sensing</h4>
+
+<p>Passive remote sensing uses naturally available energy reflected or emitted by objects. Most optical satellite imagery relies on sunlight reflected from the Earth's surface.</p>
+
+<p>Examples include:</p>
+<ul>
+<li>Satellite cameras recording reflected sunlight.</li>
+<li>Thermal sensors detecting naturally emitted heat.</li>
+<li>Optical sensors recording vegetation and water features.</li>
+</ul>
+
+<h4>B. Active Remote Sensing</h4>
+
+<p>Active remote sensing involves a sensor transmitting its own energy towards a target and recording the energy reflected or scattered back to the sensor.</p>
+
+<p>Examples include:</p>
+<ul>
+<li><strong>RADAR:</strong> Uses radio or microwave energy to study the Earth's surface.</li>
+<li><strong>LiDAR:</strong> Uses laser pulses to measure distances and create detailed elevation information.</li>
+</ul>
+
+<table class="geo-table">
+<tr><th>Passive sensing</th><th>Active sensing</th></tr>
+<tr><td>Uses naturally available energy.</td><td>Produces its own energy.</td></tr>
+<tr><td>Often depends on sunlight for optical imaging.</td><td>Can operate without sunlight.</td></tr>
+<tr><td>Examples: optical and thermal sensors.</td><td>Examples: RADAR and LiDAR.</td></tr>
+<tr><td>Optical imagery can be affected by clouds.</td><td>Microwave radar can often collect data through cloud cover.</td></tr>
+</table>
+
+<h3>1.5 Remote Sensing Platforms</h3>
+
+<p>A platform is the vehicle or structure on which a remote sensing instrument is mounted.</p>
+
+<ul>
+<li><strong>Ground-based platforms:</strong> Instruments operated from the Earth's surface, often for scientific measurements and calibration.</li>
+<li><strong>Airborne platforms:</strong> Aircraft, helicopters and drones carrying cameras and sensors.</li>
+<li><strong>Spaceborne platforms:</strong> Satellites orbiting the Earth and collecting geographical information over large areas.</li>
+</ul>
+
+<h3>1.6 Applications of Remote Sensing</h3>
+
+<ul>
+<li><strong>Agriculture:</strong> Monitoring crop health, identifying drought stress and estimating cultivated areas.</li>
+<li><strong>Forestry:</strong> Mapping forest cover, deforestation and forest degradation.</li>
+<li><strong>Hydrology:</strong> Monitoring rivers, lakes, wetlands and flood extent.</li>
+<li><strong>Urban planning:</strong> Monitoring urban expansion and changes in settlement patterns.</li>
+<li><strong>Geology:</strong> Identifying geological structures and studying rock formations.</li>
+<li><strong>Disaster management:</strong> Mapping floods, fires, landslides and drought impacts.</li>
+<li><strong>Climate studies:</strong> Monitoring land surface temperature, snow cover and other environmental indicators.</li>
+</ul>
+
+<h3>1.7 Advantages of Remote Sensing</h3>
+<ol>
+<li>Covers extensive geographical areas within a relatively short period.</li>
+<li>Provides repeated observations for monitoring environmental changes.</li>
+<li>Can collect information from inaccessible or dangerous locations.</li>
+<li>Provides information in different electromagnetic wavelengths.</li>
+<li>Supports environmental planning and natural resource management.</li>
+<li>Digital imagery can be integrated with GIS for further analysis.</li>
+</ol>
+
+<h3>1.8 Limitations of Remote Sensing</h3>
+<ol>
+<li>High-resolution imagery and specialised equipment can be expensive.</li>
+<li>Optical sensors may be affected by clouds, haze and atmospheric conditions.</li>
+<li>Images require specialised knowledge and software for interpretation.</li>
+<li>Different surface materials may have similar spectral characteristics.</li>
+<li>Errors can occur during image acquisition and processing.</li>
+<li>Field verification may still be necessary to confirm what is observed in an image.</li>
+</ol>
+</details>
+
+<!-- TOPIC 2 -->
+
+<details>
+<summary>TOPIC 2: ELECTROMAGNETIC RADIATION AND THE ELECTROMAGNETIC SPECTRUM</summary>
+
+<h3>2.1 Meaning of Electromagnetic Radiation</h3>
+
+<p>Electromagnetic radiation is energy that travels through space in the form of interacting electric and magnetic waves. It is fundamental to remote sensing because sensors detect electromagnetic energy reflected, transmitted or emitted by objects.</p>
+
+<p>The Sun provides much of the energy used by passive optical remote sensing systems. The Earth also emits energy, particularly in the thermal infrared region.</p>
+
+<h3>2.2 Characteristics of Electromagnetic Waves</h3>
+
+<ul>
+<li><strong>Wavelength:</strong> The distance between two successive wave peaks.</li>
+<li><strong>Frequency:</strong> The number of complete wave cycles passing a point per second.</li>
+<li><strong>Amplitude:</strong> The maximum displacement of a wave from its normal position.</li>
+<li><strong>Energy:</strong> The amount of energy carried by electromagnetic radiation.</li>
+</ul>
+
+<p>The relationship between wavelength, frequency and the speed of light is:</p>
+
+<p><strong>c = λf</strong></p>
+
+<ul>
+<li>c = speed of light.</li>
+<li>λ = wavelength.</li>
+<li>f = frequency.</li>
+</ul>
+
+<p>The energy of a photon is calculated using:</p>
+<p><strong>E = hf</strong></p>
+<p>Where E is energy, h is Planck's constant and f is frequency.</p>
+
+<h3>2.3 The Electromagnetic Spectrum</h3>
+
+<p>The electromagnetic spectrum refers to the complete range of electromagnetic radiation, arranged according to wavelength or frequency.</p>
+
+<div class="geo-diagram">
+LONG WAVELENGTH / LOW FREQUENCY<br>
+RADIO WAVES → MICROWAVES → INFRARED<br>
+→ VISIBLE LIGHT → ULTRAVIOLET → X-RAYS → GAMMA RAYS<br>
+SHORT WAVELENGTH / HIGH FREQUENCY
+</div>
+
+<p>The main regions include:</p>
+
+<ol>
+<li><strong>Radio waves:</strong> Used in communication and some remote sensing applications.</li>
+<li><strong>Microwaves:</strong> Important in radar remote sensing because they can penetrate clouds and are sensitive to surface moisture and structure.</li>
+<li><strong>Infrared:</strong> Useful for studying vegetation, moisture and surface temperature.</li>
+<li><strong>Visible light:</strong> The part of the spectrum detectable by the human eye, consisting of red, green and blue light.</li>
+<li><strong>Ultraviolet:</strong> Used in specialised environmental and atmospheric studies.</li>
+<li><strong>X-rays and gamma rays:</strong> High-energy radiation with specialised scientific applications.</li>
+</ol>
+
+<h3>2.4 Interaction of Radiation with the Atmosphere</h3>
+
+<p>As electromagnetic radiation passes through the atmosphere, it interacts with gases, dust particles, aerosols and clouds.</p>
+
+<p>Three important processes occur:</p>
+
+<ul>
+<li><strong>Absorption:</strong> Atmospheric gases absorb energy at particular wavelengths, reducing the amount that reaches the sensor.</li>
+<li><strong>Scattering:</strong> Radiation is redirected by particles and molecules in the atmosphere.</li>
+<li><strong>Transmission:</strong> Radiation passes through the atmosphere without being absorbed or scattered significantly.</li>
+</ul>
+
+<p>An atmospheric window is a wavelength region in which radiation can pass through the atmosphere relatively easily. Remote sensing instruments are designed to use suitable atmospheric windows.</p>
+
+<h3>2.5 Interaction of Radiation with Earth's Surface</h3>
+
+<p>When electromagnetic radiation reaches an object, it may undergo three main processes:</p>
+
+<ul>
+<li><strong>Reflection:</strong> Energy is redirected from the surface.</li>
+<li><strong>Absorption:</strong> Energy is taken in by the object.</li>
+<li><strong>Transmission:</strong> Energy passes through the object.</li>
+</ul>
+
+<div class="geo-diagram">
+INCOMING RADIATION<br>
+↓<br>
+TARGET SURFACE<br>
+↙ REFLECTION<br>
+↓ ABSORPTION<br>
+↘ TRANSMISSION
+</div>
+
+<p>The relative proportions depend on the wavelength and the physical and chemical characteristics of the target.</p>
+
+<h3>2.6 Spectral Signatures</h3>
+
+<p>A spectral signature is the characteristic pattern of reflected or emitted electromagnetic energy from an object across different wavelengths.</p>
+
+<p>Different geographical materials have different spectral responses. For example:</p>
+
+<ul>
+<li>Healthy green vegetation strongly reflects near-infrared radiation.</li>
+<li>Water generally absorbs much of the near-infrared energy and therefore often appears dark in near-infrared images.</li>
+<li>Dry bare soil and wet soil may have different reflectance characteristics.</li>
+<li>Built-up surfaces have varying spectral responses depending on their construction materials.</li>
+</ul>
+
+<p>Spectral signatures help geographers distinguish vegetation, water, soil, rocks and urban surfaces in satellite imagery.</p>
+
+<h3>2.7 Importance of Electromagnetic Radiation in Remote Sensing</h3>
+
+<ol>
+<li>It provides the energy detected by remote sensing instruments.</li>
+<li>It makes it possible to distinguish different surface materials.</li>
+<li>It supports the identification of vegetation conditions.</li>
+<li>It allows measurement of thermal conditions.</li>
+<li>It supports land-cover classification and environmental monitoring.</li>
+</ol>
+</details>
+
+<!-- TOPIC 3 -->
+
+<details>
+<summary>TOPIC 3: SATELLITES, SENSORS AND RESOLUTION</summary>
+
+<h3>3.1 Meaning of a Satellite</h3>
+
+<p>A satellite is an object that revolves around another, larger object. In remote sensing, artificial Earth-observation satellites carry sensors that collect information about the Earth's surface and atmosphere.</p>
+
+<h3>3.2 Types of Earth Observation Orbits</h3>
+
+<ul>
+<li><strong>Polar orbit:</strong> A satellite travels approximately from north to south over the poles as the Earth rotates beneath it. It can progressively observe different parts of the Earth's surface.</li>
+<li><strong>Sun-synchronous orbit:</strong> A near-polar orbit designed so that the satellite passes over a location at approximately the same local solar time on successive observations.</li>
+<li><strong>Geostationary orbit:</strong> A satellite orbits above the equator at a rate matching the Earth's rotation, appearing stationary over a particular location. It is widely used for weather observation.</li>
+</ul>
+
+<h3>3.3 Meaning of a Sensor</h3>
+
+<p>A sensor is an instrument that detects and records electromagnetic energy. It may be designed to measure visible light, infrared radiation, microwave energy or other wavelength regions.</p>
+
+<h3>3.4 Characteristics of Remote Sensing Sensors</h3>
+
+<p>Sensor performance is commonly described using four types of resolution.</p>
+
+<h4>A. Spatial Resolution</h4>
+<p>Spatial resolution refers to the ground area represented by an individual pixel in a digital image. For example, a 10-metre spatial resolution means that a pixel represents approximately 10 m × 10 m on the ground in the image's nominal ground sampling distance.</p>
+
+<p>Higher spatial resolution generally allows smaller features to be distinguished.</p>
+
+<h4>B. Spectral Resolution</h4>
+<p>Spectral resolution refers to the ability of a sensor to distinguish different wavelength regions. Sensors with many narrow spectral bands can detect more detailed differences in the spectral characteristics of surface materials.</p>
+
+<h4>C. Radiometric Resolution</h4>
+<p>Radiometric resolution refers to the ability of a sensor to distinguish small differences in recorded energy intensity. It is often expressed in bits.</p>
+
+<p>For example, an 8-bit image can represent 256 possible digital values, ranging from 0 to 255.</p>
+
+<h4>D. Temporal Resolution</h4>
+<p>Temporal resolution refers to how frequently a sensor obtains observations of the same geographical area.</p>
+
+<p>High temporal resolution is useful when studying rapidly changing phenomena such as floods, vegetation conditions and weather systems.</p>
+
+<table class="geo-table">
+<tr><th>Resolution</th><th>What it measures</th></tr>
+<tr><td>Spatial</td><td>Size of the ground area represented by pixels.</td></tr>
+<tr><td>Spectral</td><td>Ability to distinguish wavelength regions.</td></tr>
+<tr><td>Radiometric</td><td>Ability to distinguish energy intensity differences.</td></tr>
+<tr><td>Temporal</td><td>Frequency of repeated observations.</td></tr>
+</table>
+
+<h3>3.5 Examples of Earth Observation Satellites</h3>
+
+<ul>
+<li><strong>Landsat:</strong> Used for monitoring land cover, agriculture, forests, water bodies and environmental changes.</li>
+<li><strong>Sentinel-1:</strong> Uses radar technology for observing the Earth's surface.</li>
+<li><strong>Sentinel-2:</strong> Provides multispectral imagery useful for vegetation, land cover and water monitoring.</li>
+<li><strong>MODIS:</strong> Used for large-scale environmental and climate observations.</li>
+<li><strong>GOES:</strong> Geostationary weather satellites used for atmospheric monitoring.</li>
+</ul>
+
+<h3>3.6 Image Resolution and Pixel Size</h3>
+
+<p>A pixel is the smallest individual picture element in a digital raster image. Each pixel stores a numerical value representing the measurement recorded for the corresponding ground area.</p>
+
+<p>For example, a 30 m × 30 m pixel represents:</p>
+
+<p><strong>Area = 30 × 30 = 900 m².</strong></p>
+
+<p>If 100 pixels represent a particular land-cover class, their nominal combined area is:</p>
+
+<p><strong>100 × 900 = 90,000 m² = 9 hectares.</strong></p>
+
+<div class="geo-note">
+<strong>Important:</strong> Spatial resolution, image scale and the actual ability to identify an object are related but are not identical. A smaller pixel does not automatically guarantee that every small object will be clearly identifiable.
+</div>
+</details>
+
+<!-- TOPIC 4 -->
+
+<details>
+<summary>TOPIC 4: SATELLITE IMAGERY AND IMAGE INTERPRETATION</summary>
+
+<h3>4.1 Meaning of Satellite Imagery</h3>
+
+<p>Satellite imagery refers to digital or photographic representations of the Earth's surface produced from measurements collected by sensors on satellites.</p>
+
+<p>These images provide information about the distribution and characteristics of geographical features.</p>
+
+<h3>4.2 Types of Satellite Images</h3>
+
+<ul>
+<li><strong>Panchromatic images:</strong> Images recorded in a single broad wavelength band, usually displayed in shades of grey.</li>
+<li><strong>Multispectral images:</strong> Images containing several wavelength bands, including visible and infrared bands.</li>
+<li><strong>Hyperspectral images:</strong> Images containing many narrow and closely spaced spectral bands.</li>
+<li><strong>Thermal images:</strong> Images produced from measurements of thermal infrared radiation.</li>
+<li><strong>Radar images:</strong> Images generated from microwave energy transmitted and received by active radar systems.</li>
+</ul>
+
+<h3>4.3 Image Interpretation</h3>
+
+<p>Image interpretation is the process of identifying, describing and analysing objects and geographical features appearing in aerial photographs or satellite imagery.</p>
+
+<h3>4.4 Elements of Visual Image Interpretation</h3>
+
+<ol>
+<li><strong>Tone and colour:</strong> The brightness or colour of an object. Different surfaces reflect different amounts of energy.</li>
+<li><strong>Shape:</strong> The general form or outline of an object. Roads, buildings and rivers may have recognisable shapes.</li>
+<li><strong>Size:</strong> The dimensions of a feature in relation to other objects and the image scale.</li>
+<li><strong>Texture:</strong> The frequency of tonal changes in an image. Forests may appear rougher than uniform grassland.</li>
+<li><strong>Pattern:</strong> The spatial arrangement or repetition of features. Agricultural fields may form regular patterns.</li>
+<li><strong>Shadow:</strong> Dark areas produced when objects block incoming radiation. Shadows can help estimate the height and shape of features.</li>
+<li><strong>Site:</strong> The geographical location or topographic position of an object.</li>
+<li><strong>Association:</strong> The relationship between a feature and nearby objects. For example, a railway station may be associated with railway tracks.</li>
+</ol>
+
+<h3>4.5 False Colour Composite</h3>
+
+<p>A false colour composite is an image produced by assigning spectral bands to display colours that do not necessarily match the natural colours perceived by the human eye.</p>
+
+<p>For example, when near-infrared is assigned to the red display channel, healthy vegetation often appears bright red because it strongly reflects near-infrared energy.</p>
+
+<h3>4.6 Digital Image Processing</h3>
+
+<p>Digital image processing involves computer-based operations performed on satellite imagery to improve its quality or extract useful information.</p>
+
+<p>Common operations include:</p>
+
+<ul>
+<li><strong>Geometric correction:</strong> Correcting positional and geometric distortions.</li>
+<li><strong>Radiometric correction:</strong> Correcting sensor-related and illumination-related differences in recorded values.</li>
+<li><strong>Atmospheric correction:</strong> Reducing the influence of atmospheric effects on image measurements.</li>
+<li><strong>Image enhancement:</strong> Improving image appearance to make features easier to identify.</li>
+<li><strong>Image classification:</strong> Assigning image pixels to categories such as water, vegetation, soil and built-up land.</li>
+<li><strong>Change detection:</strong> Comparing images from different dates to identify changes on the Earth's surface.</li>
+</ul>
+
+<h3>4.7 Land Use and Land Cover</h3>
+
+<p><strong>Land cover</strong> describes the physical materials covering the Earth's surface, such as forests, water, bare soil and grassland.</p>
+
+<p><strong>Land use</strong> describes the human purpose or activity associated with a particular area, such as residential development, farming, industry and recreation.</p>
+
+<p>Remote sensing supports the mapping of both land use and land cover, although land use often requires additional contextual information.</p>
+
+<h3>4.8 Applications in Kenya</h3>
+
+<ul>
+<li>Monitoring forest cover in the Mau Forest Complex.</li>
+<li>Monitoring agricultural conditions in the Rift Valley.</li>
+<li>Mapping urban expansion in Nairobi and Kisumu.</li>
+<li>Monitoring wetlands around Lake Victoria.</li>
+<li>Assessing drought conditions in arid and semi-arid counties.</li>
+<li>Mapping flood extent in river basins.</li>
+</ul>
+</details>
+
+<!-- TOPIC 5 -->
+
+<details>
+<summary>TOPIC 5: INTRODUCTION TO GEOGRAPHIC INFORMATION SYSTEMS (GIS)</summary>
+
+<h3>5.1 Meaning of GIS</h3>
+
+<p>A Geographic Information System (GIS) is an organised system of computer hardware, software, geographical data, people and procedures used to collect, store, manage, manipulate, analyse and display information associated with specific locations on the Earth's surface.</p>
+
+<p>GIS links geographical location with descriptive information. This enables users to understand where features are located, what characteristics they possess and how they relate spatially to one another.</p>
+
+<p>For example, a GIS database can store the locations of hospitals together with information about their names, bed capacities, services and accessibility.</p>
+
+<h3>5.2 History and Development of GIS</h3>
+
+<p>GIS developed from early mapping and computer-based spatial analysis. Its development was influenced by advances in computer technology, cartography, surveying, remote sensing and geography.</p>
+
+<ul>
+<li>Traditional paper maps provided the foundation for spatial information.</li>
+<li>Computer mapping improved the production and storage of maps.</li>
+<li>Digital databases enabled geographical data to be stored and retrieved more efficiently.</li>
+<li>Modern GIS integrates satellite imagery, GPS, mobile devices, internet mapping and spatial analysis.</li>
+</ul>
+
+<h3>5.3 Components of GIS</h3>
+
+<p>A functional GIS consists of five major components:</p>
+
+<h4>1. Hardware</h4>
+<p>Physical computer equipment used to operate GIS, including computers, servers, storage devices, scanners, GPS receivers and printers.</p>
+
+<h4>2. Software</h4>
+<p>Computer programmes used to create, edit, analyse and display spatial information.</p>
+<p>Examples include QGIS, ArcGIS Pro and GRASS GIS.</p>
+
+<h4>3. Data</h4>
+<p>Geographical information is the foundation of any GIS operation. It includes spatial data and attribute data.</p>
+
+<h4>4. People</h4>
+<p>GIS professionals, geographers, planners, surveyors, researchers and decision-makers who operate and interpret GIS information.</p>
+
+<h4>5. Methods and Procedures</h4>
+<p>Rules, techniques and workflows followed when collecting, processing, analysing and presenting geographical information.</p>
+
+<div class="geo-diagram">
+<strong>THE FIVE COMPONENTS OF GIS</strong><br><br>
+HARDWARE<br>↓<br>
+SOFTWARE<br>↓<br>
+DATA<br>↓<br>
+PEOPLE<br>↓<br>
+METHODS AND PROCEDURES<br><br>
+<strong>TOGETHER THEY PRODUCE USEFUL GEOGRAPHICAL INFORMATION</strong>
+</div>
+
+<h3>5.4 Functions of GIS</h3>
+
+<ol>
+<li><strong>Data capture:</strong> Collecting geographical information through GPS, surveying, digitisation, remote sensing and other methods.</li>
+<li><strong>Data storage:</strong> Organising geographical information in digital databases.</li>
+<li><strong>Data management:</strong> Editing, updating and maintaining spatial datasets.</li>
+<li><strong>Data manipulation:</strong> Changing or transforming geographical data into a suitable format.</li>
+<li><strong>Spatial analysis:</strong> Investigating geographical relationships, patterns and processes.</li>
+<li><strong>Data visualisation:</strong> Presenting results using maps, graphs and other visual outputs.</li>
+</ol>
+
+<h3>5.5 Applications of GIS</h3>
+
+<ul>
+<li><strong>Urban planning:</strong> Mapping settlements, roads, land use and public facilities.</li>
+<li><strong>Agriculture:</strong> Identifying suitable farming areas and monitoring crop conditions.</li>
+<li><strong>Health:</strong> Mapping disease distribution and the accessibility of healthcare facilities.</li>
+<li><strong>Transport:</strong> Planning road networks and analysing travel routes.</li>
+<li><strong>Environmental management:</strong> Monitoring pollution, forests and natural resources.</li>
+<li><strong>Disaster management:</strong> Identifying hazard-prone areas and supporting emergency response.</li>
+<li><strong>Population studies:</strong> Mapping population density and settlement distribution.</li>
+<li><strong>Land administration:</strong> Mapping property boundaries and land parcels.</li>
+</ul>
+</details>
+
+<!-- TOPIC 6 -->
+
+<details>
+<summary>TOPIC 6: GIS DATA TYPES AND DATA STRUCTURES</summary>
+
+<h3>6.1 Meaning of Spatial Data</h3>
+
+<p>Spatial data refers to information describing the geographical location, shape, size and spatial relationships of features on the Earth's surface.</p>
+
+<h3>6.2 Meaning of Attribute Data</h3>
+
+<p>Attribute data refers to descriptive information associated with geographical features.</p>
+
+<p>For example, a point representing a school may have attributes such as:</p>
+
+<ul>
+<li>School name.</li>
+<li>School type.</li>
+<li>Number of students.</li>
+<li>Number of teachers.</li>
+<li>Ownership.</li>
+</ul>
+
+<h3>6.3 Vector Data</h3>
+
+<p>Vector data represents geographical features using points, lines and polygons.</p>
+
+<h4>A. Points</h4>
+<p>Points represent geographical locations that are too small to be represented meaningfully by their actual area at the selected map scale.</p>
+<p>Examples: boreholes, schools, hospitals, bus stops and individual trees.</p>
+
+<h4>B. Lines</h4>
+<p>Lines represent linear geographical features.</p>
+<p>Examples: roads, rivers, pipelines, railways and electricity transmission lines.</p>
+
+<h4>C. Polygons</h4>
+<p>Polygons represent enclosed areas with defined boundaries.</p>
+<p>Examples: counties, forests, lakes, farms and administrative boundaries.</p>
+
+<div class="geo-diagram">
+<strong>VECTOR DATA</strong><br><br>
+POINT: • School or hospital<br><br>
+LINE: ───────── Road or river<br><br>
+POLYGON: ▰ County, forest or farm
+</div>
+
+<h3>6.4 Raster Data</h3>
+
+<p>Raster data represents geographical information as a grid of cells or pixels. Each cell contains a value describing the characteristic of the corresponding geographical area.</p>
+
+<p>Raster data is useful for representing continuous geographical phenomena such as elevation, rainfall, temperature and satellite imagery.</p>
+
+<h3>6.5 Differences Between Vector and Raster Data</h3>
+
+<table class="geo-table">
+<tr><th>Vector</th><th>Raster</th></tr>
+<tr><td>Uses points, lines and polygons.</td><td>Uses rows and columns of cells.</td></tr>
+<tr><td>Suitable for discrete features.</td><td>Suitable for continuous phenomena and imagery.</td></tr>
+<tr><td>Can represent boundaries precisely.</td><td>Accuracy depends partly on cell size and data quality.</td></tr>
+<tr><td>Examples: roads and administrative boundaries.</td><td>Examples: elevation and satellite imagery.</td></tr>
+</table>
+
+<h3>6.6 Attribute Tables</h3>
+
+<p>An attribute table is a structured table containing descriptive information about spatial features. Each record usually represents a geographical feature, while columns represent its characteristics.</p>
+
+<p>For example:</p>
+
+<table class="geo-table">
+<tr><th>School ID</th><th>Name</th><th>Students</th><th>Type</th></tr>
+<tr><td>001</td><td>School A</td><td>450</td><td>Public</td></tr>
+<tr><td>002</td><td>School B</td><td>320</td><td>Private</td></tr>
+<tr><td>003</td><td>School C</td><td>510</td><td>Public</td></tr>
+</table>
+
+<h3>6.7 Data Sources in GIS</h3>
+
+<ul>
+<li>Field surveys and ground measurements.</li>
+<li>Global Positioning System (GPS) receivers.</li>
+<li>Satellite imagery and aerial photographs.</li>
+<li>Existing maps and cadastral records.</li>
+<li>Government statistical publications.</li>
+<li>OpenStreetMap and other spatial databases.</li>
+<li>Digitisation of paper maps.</li>
+</ul>
+</details>
+
+<!-- TOPIC 7 -->
+
+<details>
+<summary>TOPIC 7: COORDINATE SYSTEMS, DATUMS AND MAP PROJECTIONS</summary>
+
+<h3>7.1 Geographic Coordinates</h3>
+
+<p>A geographic coordinate system identifies locations on the Earth's surface using angular measurements of latitude and longitude.</p>
+
+<ul>
+<li><strong>Latitude:</strong> Angular distance north or south of the Equator.</li>
+<li><strong>Longitude:</strong> Angular distance east or west of the Prime Meridian.</li>
+</ul>
+
+<h3>7.2 Geographic Coordinate System (GCS)</h3>
+
+<p>A GCS is a reference system that uses latitude and longitude to identify positions on a three-dimensional model of the Earth. It depends on a datum and an angular coordinate framework.</p>
+
+<h3>7.3 Projected Coordinate System (PCS)</h3>
+
+<p>A projected coordinate system represents the Earth's curved surface on a flat two-dimensional plane using a map projection. Positions are usually expressed in linear units such as metres.</p>
+
+<h3>7.4 Map Projections</h3>
+
+<p>A map projection is a mathematical method of transforming locations on the curved Earth onto a flat map.</p>
+
+<p>Common projection families include:</p>
+
+<ul>
+<li><strong>Cylindrical projections:</strong> Project the Earth's surface onto a cylinder.</li>
+<li><strong>Conical projections:</strong> Project the Earth's surface onto a cone.</li>
+<li><strong>Azimuthal projections:</strong> Project the Earth's surface onto a flat plane.</li>
+</ul>
+
+<p>Every map projection introduces some distortion in shape, area, distance or direction. The appropriate projection depends on the purpose and geographical extent of the map.</p>
+
+<h3>7.5 Coordinate Reference Systems in GIS</h3>
+
+<p>A Coordinate Reference System (CRS) defines how spatial coordinates relate to actual positions on the Earth.</p>
+
+<p>Examples include:</p>
+
+<ul>
+<li>WGS 84 geographic coordinates.</li>
+<li>UTM projected coordinate systems.</li>
+<li>National and regional projected coordinate systems.</li>
+</ul>
+
+<div class="geo-note">
+<strong>Practical importance:</strong> Layers with incompatible coordinate reference systems may appear in different positions when displayed together. Reprojection and appropriate CRS selection help align spatial datasets.
+</div>
+
+<h3>7.6 Importance of Coordinate Systems</h3>
+
+<ol>
+<li>Enable accurate geographical positioning.</li>
+<li>Support measurement of distances and areas.</li>
+<li>Allow integration of different spatial datasets.</li>
+<li>Support navigation and surveying.</li>
+<li>Improve the accuracy of spatial analysis and map production.</li>
+</ol>
+</details>
+
+<!-- TOPIC 8 -->
+
+<details>
+<summary>TOPIC 8: SPATIAL ANALYSIS IN GIS</summary>
+
+<h3>8.1 Meaning of Spatial Analysis</h3>
+
+<p>Spatial analysis refers to the application of mathematical, statistical and computational techniques to geographical data to identify spatial patterns, relationships and processes.</p>
+
+<h3>8.2 Major GIS Spatial Analysis Techniques</h3>
+
+<h4>1. Buffer Analysis</h4>
+<p>Buffer analysis creates a zone around a geographical feature at a specified distance.</p>
+<p>Example: Creating a 500-metre buffer around schools to study nearby residential development.</p>
+
+<h4>2. Overlay Analysis</h4>
+<p>Overlay analysis combines two or more geographical layers to identify relationships between them.</p>
+<p>Example: Combining soil, slope and rainfall maps to identify suitable agricultural areas.</p>
+
+<h4>3. Network Analysis</h4>
+<p>Network analysis studies movement and connectivity through networks such as roads, railways and pipelines.</p>
+<p>Example: Finding the shortest route between a village and the nearest hospital.</p>
+
+<h4>4. Proximity Analysis</h4>
+<p>Proximity analysis determines how close geographical features are to one another.</p>
+<p>Example: Identifying households located within a certain distance of a water source.</p>
+
+<h4>5. Interpolation</h4>
+<p>Interpolation estimates unknown values at locations using known observations from surrounding locations.</p>
+<p>Example: Estimating rainfall distribution between weather stations.</p>
+
+<h4>6. Terrain Analysis</h4>
+<p>Terrain analysis uses elevation information to study land surface characteristics.</p>
+<p>Examples include slope, aspect, contours and hillshade.</p>
+
+<h4>7. Spatial Query</h4>
+<p>A spatial query selects features according to their location or spatial relationship with other features.</p>
+<p>Example: Selecting all schools located inside a particular county.</p>
+
+<h3>8.3 Importance of Spatial Analysis</h3>
+
+<ul>
+<li>Helps identify geographical patterns.</li>
+<li>Supports evidence-based planning.</li>
+<li>Improves resource allocation.</li>
+<li>Helps locate suitable sites for development projects.</li>
+<li>Supports disaster risk assessment.</li>
+<li>Improves environmental monitoring.</li>
+</ul>
+
+<h3>8.4 Practical Example: Selecting a Suitable Hospital Site</h3>
+
+<p>Suppose a county government wants to establish a new hospital.</p>
+
+<p>GIS can help by:</p>
+
+<ol>
+<li>Mapping existing hospitals.</li>
+<li>Mapping roads and settlements.</li>
+<li>Identifying densely populated areas with limited access to healthcare.</li>
+<li>Excluding unsuitable locations such as flood-prone land.</li>
+<li>Combining the geographical layers through overlay analysis.</li>
+<li>Identifying and ranking suitable locations.</li>
+</ol>
+</details>
+
+<!-- TOPIC 9 -->
+
+<details>
+<summary>TOPIC 9: INTEGRATION OF REMOTE SENSING AND GIS</summary>
+
+<h3>9.1 Relationship Between Remote Sensing and GIS</h3>
+
+<p>Remote Sensing and GIS are closely related geographical technologies, but they perform different functions.</p>
+
+<p>Remote sensing primarily acquires information about the Earth's surface from a distance, while GIS manages, integrates, analyses and displays geographically referenced information.</p>
+
+<h3>9.2 How They Work Together</h3>
+
+<div class="geo-diagram">
+SATELLITE / DRONE IMAGERY<br>
+↓<br>
+REMOTE SENSING DATA COLLECTION<br>
+↓<br>
+IMAGE PROCESSING AND CLASSIFICATION<br>
+↓<br>
+GEOGRAPHICAL DATA IMPORTED INTO GIS<br>
+↓<br>
+SPATIAL ANALYSIS<br>
+↓<br>
+MAPS, REPORTS AND DECISION-MAKING
+</div>
+
+<h3>9.3 Practical Example: Monitoring Deforestation</h3>
+
+<p>Imagine researchers want to investigate changes in forest cover in the Mau Forest Complex.</p>
+
+<ol>
+<li>Acquire satellite images from two different dates.</li>
+<li>Correct and prepare the images for analysis.</li>
+<li>Classify the images into forest and non-forest categories.</li>
+<li>Compare the two classified maps.</li>
+<li>Use GIS to calculate areas of forest loss or gain.</li>
+<li>Produce maps showing the spatial distribution of forest changes.</li>
+<li>Use the results to support forest conservation and land management.</li>
+</ol>
+
+<h3>9.4 Benefits of Integration</h3>
+
+<ul>
+<li>Improves the quality of geographical information.</li>
+<li>Supports the analysis of changes over time.</li>
+<li>Combines satellite imagery with other spatial datasets.</li>
+<li>Improves environmental planning and management.</li>
+<li>Supports better geographical decision-making.</li>
+</ul>
+</details>
+
+<!-- TOPIC 10 -->
+
+<details>
+<summary>TOPIC 10: GIS SOFTWARE AND PRACTICAL APPLICATIONS</summary>
+
+<h3>10.1 Common GIS Software</h3>
+
+<ul>
+<li><strong>QGIS:</strong> Free and open-source GIS software used for mapping, spatial analysis and data management.</li>
+<li><strong>ArcGIS Pro:</strong> Commercial GIS software developed by Esri for advanced mapping and spatial analysis.</li>
+<li><strong>GRASS GIS:</strong> Open-source software with powerful raster and vector processing capabilities.</li>
+<li><strong>Google Earth:</strong> Useful for exploring satellite imagery and geographical locations, although it is not a complete replacement for desktop GIS software.</li>
+</ul>
+
+<h3>10.2 Basic QGIS Workflow</h3>
+
+<ol>
+<li>Install and open QGIS.</li>
+<li>Create a new project.</li>
+<li>Set an appropriate coordinate reference system.</li>
+<li>Load vector or raster datasets.</li>
+<li>Examine the attribute tables.</li>
+<li>Style the geographical layers.</li>
+<li>Perform spatial analysis where necessary.</li>
+<li>Prepare a map layout with a title, legend, scale bar and north arrow.</li>
+<li>Export the final map.</li>
+</ol>
+
+<h3>10.3 Practical GIS Exercise</h3>
+
+<p><strong>Title:</strong> Mapping schools and health facilities in a selected Kenyan county.</p>
+
+<p><strong>Objectives:</strong></p>
+<ul>
+<li>Identify the distribution of schools and health facilities.</li>
+<li>Represent geographical features using point data.</li>
+<li>Examine the relationship between facilities and settlements.</li>
+<li>Prepare a thematic map.</li>
+</ul>
+
+<p><strong>Required data:</strong> County boundary, school locations, health facility locations and road network.</p>
+
+<p><strong>Expected output:</strong> A map displaying the distribution of schools and health facilities, together with a short interpretation of the observed patterns.</p>
+</details>
+
+<!-- TOPIC 11 -->
+
+<details>
+<summary>TOPIC 11: CHALLENGES, ETHICS AND FUTURE OF GIS AND REMOTE SENSING</summary>
+
+<h3>11.1 Technical Challenges</h3>
+
+<ul>
+<li>Inaccurate or incomplete geographical datasets.</li>
+<li>High costs of some satellite imagery and equipment.</li>
+<li>Limited computing infrastructure.</li>
+<li>Complex data processing requirements.</li>
+<li>Incompatibility between datasets and coordinate systems.</li>
+</ul>
+
+<h3>11.2 Institutional and Human Challenges</h3>
+
+<ul>
+<li>Shortage of trained GIS professionals.</li>
+<li>Limited funding for geographical projects.</li>
+<li>Inadequate access to updated spatial information.</li>
+<li>Limited awareness of GIS applications among decision-makers.</li>
+</ul>
+
+<h3>11.3 Ethical Issues</h3>
+
+<ul>
+<li>Protection of personal and sensitive location information.</li>
+<li>Responsible collection and use of geographical data.</li>
+<li>Respect for privacy and property rights.</li>
+<li>Transparency in spatial analysis and map presentation.</li>
+<li>Avoiding misleading maps and inaccurate interpretations.</li>
+</ul>
+
+<h3>11.4 Future Developments</h3>
+
+<p>The future of GIS and Remote Sensing is influenced by several technologies:</p>
+
+<ul>
+<li>Artificial intelligence and machine learning.</li>
+<li>Unmanned aerial vehicles and drones.</li>
+<li>Real-time satellite monitoring.</li>
+<li>Cloud-based GIS platforms.</li>
+<li>Three-dimensional mapping.</li>
+<li>High-resolution Earth observation.</li>
+<li>Integration of GIS with mobile technologies and the Internet of Things.</li>
+</ul>
+</details>
+
+<!-- REVISION QUESTIONS -->
+
+<div class="geo-questions">
+<h3>GEO 112: UNIVERSITY REVISION QUESTIONS AND ANSWERS</h3>
+
+<details>
+<summary>1. Define Remote Sensing and explain five of its applications.</summary>
+<p><strong>Answer:</strong> Remote sensing is the acquisition of information about objects or areas without physical contact, through the detection of reflected or emitted energy.</p>
+<p>Applications include agriculture, forestry, urban planning, disaster management and environmental monitoring.</p>
+</details>
+
+<details>
+<summary>2. Differentiate between active and passive remote sensing.</summary>
+<p><strong>Answer:</strong> Passive remote sensing detects naturally available reflected or emitted energy, whereas active remote sensing transmits its own energy and measures the returned signal. Examples are optical satellite imagery for passive sensing and RADAR for active sensing.</p>
+</details>
+
+<details>
+<summary>3. Explain the four types of remote sensing resolution.</summary>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>Spatial: Ground area represented by a pixel.</li>
+<li>Spectral: Ability to distinguish wavelength bands.</li>
+<li>Radiometric: Ability to distinguish differences in energy intensity.</li>
+<li>Temporal: Frequency of repeat observations.</li>
+</ul>
+</details>
+
+<details>
+<summary>4. Explain the meaning of spectral signature and its importance.</summary>
+<p><strong>Answer:</strong> A spectral signature is the characteristic pattern of electromagnetic energy reflected or emitted by an object across different wavelengths. It helps identify and classify vegetation, water, soil and other surface materials.</p>
+</details>
+
+<details>
+<summary>5. Explain the five major components of GIS.</summary>
+<p><strong>Answer:</strong> Hardware, software, data, people and methods or procedures. All five work together to collect, manage, analyse and present geographical information.</p>
+</details>
+
+<details>
+<summary>6. Differentiate between raster and vector data.</summary>
+<p><strong>Answer:</strong> Raster data represents geographical information through a grid of cells, while vector data represents features using points, lines and polygons.</p>
+</details>
+
+<details>
+<summary>7. Explain five applications of GIS in Kenya.</summary>
+<p><strong>Answer:</strong> Urban planning, agricultural planning, disease mapping, transport planning and environmental conservation.</p>
+</details>
+
+<details>
+<summary>8. Discuss the relationship between GIS and Remote Sensing.</summary>
+<p><strong>Answer:</strong> Remote sensing collects information about the Earth's surface using sensors, while GIS stores, integrates and analyses the resulting information together with other spatial datasets. They complement one another in geographical research and planning.</p>
+</details>
+
+<details>
+<summary>9. Explain five elements of image interpretation.</summary>
+<p><strong>Answer:</strong> Tone or colour, shape, size, texture, pattern, shadow, site and association. Any five well-explained elements earn credit.</p>
+</details>
+
+<details>
+<summary>10. Explain how GIS can support disaster management.</summary>
+<p><strong>Answer:</strong> GIS can map hazard-prone areas, identify vulnerable populations, analyse evacuation routes, locate emergency services and support the allocation of relief resources.</p>
+</details>
+
+<details>
+<summary>11. A satellite image has a spatial resolution of 20 metres. Calculate the area represented by one pixel.</summary>
+<p><strong>Answer:</strong></p>
+<p>Area = length × width</p>
+<p>= 20 m × 20 m</p>
+<p>= <strong>400 m²</strong>.</p>
+</details>
+
+<details>
+<summary>12. Discuss the advantages and limitations of Remote Sensing.</summary>
+<p><strong>Answer:</strong> Advantages include large-area coverage, repeated observation, access to inaccessible places and environmental monitoring. Limitations include cost, atmospheric interference, processing complexity and the need for field verification.</p>
+</details>
+
+<h3>Suggested CAT and Examination Essay Questions</h3>
+<ol>
+<li>Discuss the principles and applications of Remote Sensing in modern Geography.</li>
+<li>Examine the role of electromagnetic radiation in the acquisition of remote sensing data.</li>
+<li>Discuss the major components and functions of a Geographic Information System.</li>
+<li>Compare and contrast raster and vector data structures.</li>
+<li>Explain the importance of integrating GIS and Remote Sensing in environmental management.</li>
+<li>Discuss the contribution of GIS to sustainable development in Kenya.</li>
+</ol>
+</div>
+
+<!-- REFERENCES -->
+
+<h3>REFERENCES AND FURTHER READING</h3>
+
+<ul>
+<li>NASA Earth Observatory – <a href="https://science.nasa.gov/earth/earth-observatory/remote-sensing/" target="_blank" rel="noopener">Remote Sensing</a>.</li>
+<li>USGS – <a href="https://www.usgs.gov/faqs/what-remote-sensing-and-what-it-used?page=0" target="_blank" rel="noopener">What is Remote Sensing?</a>.</li>
+<li>Natural Resources Canada – <a href="https://natural-resources.canada.ca/maps-tools-publications/satellite-elevation-air-photos/fundamentals-remote-sensing-introduction" target="_blank" rel="noopener">Fundamentals of Remote Sensing</a>.</li>
+<li>QGIS – <a href="https://qgis.org/" target="_blank" rel="noopener">Official software and learning resources</a>.</li>
+<li>USGS – <a href="https://www.usgs.gov/landsat-missions" target="_blank" rel="noopener">Landsat Missions</a>.</li>
+</ul>
+
+<p><strong>GeoPoint Learning Note:</strong> These notes are designed as a university-level introductory study resource. Students should supplement them with lecturer materials, practical exercises, recommended textbooks and field observations.</p>
+
+</section>
+<!-- END GEO 112 -->
+
 <section id="revision">
 <h2>📝 Revision Corner</h2>
 <p>Test your understanding with these introductory questions.</p>
